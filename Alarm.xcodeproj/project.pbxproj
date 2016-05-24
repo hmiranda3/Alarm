@@ -12,6 +12,11 @@
 		1A0FB7861CDD4F07006808D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FB7851CDD4F07006808D9 /* Assets.xcassets */; };
 		1A0FB7891CDD4F07006808D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FB7871CDD4F07006808D9 /* LaunchScreen.storyboard */; };
 		1A0FB7BF1CE19229006808D9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FB7BE1CE19229006808D9 /* DateHelper.swift */; };
+		28EA35141CF3AB5800259575 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA35131CF3AB5800259575 /* Alarm.swift */; };
+		28EA35161CF3AC4600259575 /* AlarmListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA35151CF3AC4600259575 /* AlarmListTableViewController.swift */; };
+		28EA351A1CF3ACD800259575 /* AlarmDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA35191CF3ACD800259575 /* AlarmDetailTableViewController.swift */; };
+		28EA351C1CF3AD3200259575 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA351B1CF3AD3200259575 /* SwitchTableViewCell.swift */; };
+		28EA351E1CF3BCCA00259575 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EA351D1CF3BCCA00259575 /* AlarmController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1A0FB7881CDD4F07006808D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A0FB78A1CDD4F07006808D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0FB7BE1CE19229006808D9 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		28EA35131CF3AB5800259575 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alarm.swift; path = ../../../../Downloads/Alarm.swift; sourceTree = "<group>"; };
+		28EA35151CF3AC4600259575 /* AlarmListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmListTableViewController.swift; sourceTree = "<group>"; };
+		28EA35191CF3ACD800259575 /* AlarmDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDetailTableViewController.swift; sourceTree = "<group>"; };
+		28EA351B1CF3AD3200259575 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		28EA351D1CF3BCCA00259575 /* AlarmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		1A0FB77D1CDD4F07006808D9 /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				1A0FB77E1CDD4F07006808D9 /* AppDelegate.swift */,
-				1A0FB7821CDD4F07006808D9 /* Main.storyboard */,
+				28EA35171CF3AC5B00259575 /* Model */,
+				28EA351B1CF3AD3200259575 /* SwitchTableViewCell.swift */,
+				28EA35181CF3AC6600259575 /* View Controllers */,
+				28EA351F1CF3BCDE00259575 /* Controllers */,
 				1A0FB7BE1CE19229006808D9 /* DateHelper.swift */,
 				1A0FB7851CDD4F07006808D9 /* Assets.xcassets */,
+				1A0FB77E1CDD4F07006808D9 /* AppDelegate.swift */,
 				1A0FB7871CDD4F07006808D9 /* LaunchScreen.storyboard */,
 				1A0FB78A1CDD4F07006808D9 /* Info.plist */,
 			);
 			path = Alarm;
+			sourceTree = "<group>";
+		};
+		28EA35171CF3AC5B00259575 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28EA35131CF3AB5800259575 /* Alarm.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		28EA35181CF3AC6600259575 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28EA35151CF3AC4600259575 /* AlarmListTableViewController.swift */,
+				28EA35191CF3ACD800259575 /* AlarmDetailTableViewController.swift */,
+				1A0FB7821CDD4F07006808D9 /* Main.storyboard */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		28EA351F1CF3BCDE00259575 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28EA351D1CF3BCCA00259575 /* AlarmController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0FB77F1CDD4F07006808D9 /* AppDelegate.swift in Sources */,
+				28EA35161CF3AC4600259575 /* AlarmListTableViewController.swift in Sources */,
 				1A0FB7BF1CE19229006808D9 /* DateHelper.swift in Sources */,
+				28EA351A1CF3ACD800259575 /* AlarmDetailTableViewController.swift in Sources */,
+				28EA35141CF3AB5800259575 /* Alarm.swift in Sources */,
+				28EA351C1CF3AD3200259575 /* SwitchTableViewCell.swift in Sources */,
+				28EA351E1CF3BCCA00259575 /* AlarmController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
