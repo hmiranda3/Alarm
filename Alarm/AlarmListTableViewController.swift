@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlarmListTableViewController: UITableViewController {
+class AlarmListTableViewController: UITableViewController, AlarmScheduler {
     
     // var alarm: Alarm? //Ask Mike about proper MVC
 
@@ -45,6 +45,11 @@ class AlarmListTableViewController: UITableViewController {
     func switchCellValueChanged(cell: SwitchTableViewCell) {
         guard let indexPath = tableView.indexPathForCell(cell) else { return }
         let alarm = AlarmController.sharedController.alarms[indexPath.row]
+        if alarm.enabled {
+            scheduleLocalNotifications(alarm)
+        } else {
+            cancelLocalNotifications(alarm)
+        }
         AlarmController.sharedController.toggleEnabled(alarm)
         
     }
@@ -64,6 +69,7 @@ class AlarmListTableViewController: UITableViewController {
         if editingStyle == .Delete {
             let alarm = AlarmController.sharedController.alarms[indexPath.row]
             AlarmController.sharedController.deleteAlarm(alarm)
+            cancelLocalNotifications(alarm)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
